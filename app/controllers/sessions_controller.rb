@@ -14,10 +14,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    if session[:name]
     session.clear
     redirect_to controller: 'application', action: 'hello'
-  end
   end
 
 end
