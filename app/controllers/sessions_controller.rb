@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    if !current_user 
+    if session[:name]
       session.delete :name
       redirect_to controller: 'application', action: 'hello'
     end
